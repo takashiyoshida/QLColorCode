@@ -32,12 +32,11 @@ debug () {
 debug Starting colorize.sh
 #echo target is $target
 
-hlDir=$rsrcDir/highlight
-cmd=$hlDir/bin/highlight
-cmdOpts=(-I --font $font --quiet --add-data-dir $rsrcDir/override \
-         --data-dir $rsrcDir/highlight/share/highlight \
-         --add-config-dir $rsrcDir/override/config --style $hlTheme \
-         --font-size $fontSizePoints --encoding $textEncoding ${=extraHLFlags} --validate-input)
+hlDir=/usr/local/share/highlight
+cmd=/usr/local/bin/highlight
+cmdOpts=(-I -k "$font" -K $fontSizePoints --quiet -I  \
+         --style=${hlTheme} \
+         --encoding $textEncoding ${=extraHLFlags} --validate-input)
 
 #for o in $cmdOpts; do echo $o\<br/\>; done 
 
@@ -88,12 +87,13 @@ debug Resolved $target to language $lang
 
 go4it () {
     debug Generating the preview
+    local title=`basename ${target}`
     if [ $thumb = "1" ]; then
-        $reader | head -n 100 | head -c 20000 | $cmd --syntax $lang $cmdOpts && exit 0
+        $reader | head -n 100 | head -c 20000 | $cmd -S $lang $cmdOpts && exit 0
     elif [ -n "$maxFileSize" ]; then
-        $reader | head -c $maxFileSize | $cmd --syntax $lang $cmdOpts && exit 0
+        $reader | head -c $maxFileSize | $cmd -T "${title}" -S $lang $cmdOpts && exit 0
     else
-        $reader | $cmd --syntax $lang $cmdOpts && exit 0
+        $reader | $cmd -S $lang -T ${title} $cmdOpts && exit 0
     fi
 }
 

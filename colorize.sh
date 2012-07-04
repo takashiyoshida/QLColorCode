@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh -f
 
 # This code is licensed under the GPL v2.  See LICENSE.txt for details.
 

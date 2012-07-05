@@ -32,11 +32,9 @@ debug () {
 debug Starting colorize.sh
 #echo target is $target
 
-hlDir=/usr/local/share/highlight
-cmd=/usr/local/bin/highlight
-cmdOpts=(-I -k "$font" -K $fontSizePoints --quiet -I  \
-         --style=${hlTheme} \
-         --encoding $textEncoding ${=extraHLFlags} --validate-input)
+hlDir=/opt/local/share/highlight
+cmd=/opt/local/bin/highlight
+cmdOpts=(-I -k "$font" -K ${fontSizePoints} -q -s ${hlTheme} -u ${textEncoding} ${=extraHLFlags} --validate-input)
 
 #for o in $cmdOpts; do echo $o\<br/\>; done 
 

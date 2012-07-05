@@ -8,6 +8,9 @@
 # Created by Nathaniel Gray on 11/27/07.
 # Copyright 2007 Nathaniel Gray.
 
+# Modified by Anthony Gelibert on 7/5/12.
+# Copyright 2012 Anthony Gelibert.
+
 # Expects   $1 = path to resources dir of bundle
 #           $2 = name of file to colorize
 #           $3 = 1 if you want enough for a thumbnail, 0 for the full file

@@ -72,7 +72,7 @@ go4it () {
     elif [ -n "$maxFileSize" ]; then
         $reader | head -c $maxFileSize | $cmd -T "${title}" -S $lang $cmdOpts && exit 0
     else
-        $reader | $cmd -S $lang -T ${title} $cmdOpts && exit 0
+        $reader | $cmd -T "${title}" -S $lang $cmdOpts && exit 0
     fi
 }
 

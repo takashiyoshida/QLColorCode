@@ -418,6 +418,24 @@
 				<string>public.source-code</string>
 			</array>
 			<key>UTTypeDescription</key>
+			<string>Makefile Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.n8gray.makefile</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>mk</string>
+					<string>mak</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeDescription</key>
 			<string>Verilog Source File</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.n8gray.verilog</string>

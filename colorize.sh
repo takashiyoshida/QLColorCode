@@ -61,6 +61,9 @@ case $target in
             lang=h
         fi
         ;;
+    *.scpt )
+       lang=applescript
+   ;;
     * ) 
         lang=${target##*.}
     ;;
@@ -69,7 +72,7 @@ debug Resolved $target to language $lang
 
 go4it () {
     debug Generating the preview
-    local title=`basename ${target}`
+    local title="`basename ${target}`"
     if [ $thumb = "1" ]; then
         $reader | head -n 100 | head -c 20000 | $cmd -S $lang $cmdOpts && exit 0
     elif [ -n "$maxFileSize" ]; then

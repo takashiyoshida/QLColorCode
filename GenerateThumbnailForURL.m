@@ -37,7 +37,7 @@ GenerateThumbnailForURL(void *thisInterface,
     // a square, though nothing horrible should happen if it isn't.
     
     NSRect renderRect = NSMakeRect(0.0, 0.0, 600.0, 800.0);
-    float scale = maxSize.height/800.0;
+    float scale = (float)(maxSize.height/800.0);
     NSSize scaleSize = NSMakeSize(scale, scale);
     CGSize thumbSize = NSSizeToCGSize(
                             NSMakeSize((maxSize.width * (600.0/800.0)), 
@@ -49,7 +49,9 @@ GenerateThumbnailForURL(void *thisInterface,
     CFBundleRef bundle = QLThumbnailRequestGetGeneratorBundle(thumbnail);
     NSData *data = colorizeURL(bundle, url, &status, 1);
     //NSLog(@"%s", [data bytes]);
+#ifdef DEBUG
     n8log(@"Generated thumbnail html page in %.3f sec", -[startDate timeIntervalSinceNow] );
+#endif
     if (status != 0) {
 #ifndef DEBUG
         goto done;
@@ -86,8 +88,12 @@ GenerateThumbnailForURL(void *thisInterface,
         
         CFRelease(context);
     }
+    [webView release];
+    
 done:
+#ifdef DEBUG
     n8log(@"Finished thumbnail after %.3f sec\n\n", -[startDate timeIntervalSinceNow] );
+#endif
     [pool release];
     return noErr;
 }

@@ -4,7 +4,9 @@
  *
  *  Created by Nathaniel Gray on 12/6/07.
  *  Copyright 2007 Nathaniel Gray.
- *
+ *  
+ *  Modified by Anthony Gelibert on 9/5/12.
+ *  Copyright 2012 Anthony Gelibert.
  */
 
 #import <CoreFoundation/CoreFoundation.h>
@@ -78,7 +80,8 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
                                    @"edit-xcode", @"hlTheme", 
 //                                   @"-lz -j 3 -t 4 --kw-case=capitalize ", @"extraHLFlags", 
                                    @"-t 4 --kw-case=capitalize ", @"extraHLFlags", 
-                                   @"", @"maxFileSize", 
+                                   @"/opt/local/bin/highlight", @"pathHL",
+                                   @"", @"maxFileSize",
                                    @"UTF-8", @"textEncoding", 
                                    @"UTF-8", @"webkitTextEncoding", nil]];
     [env addEntriesFromDictionary:[defaults persistentDomainForName:myDomain]];

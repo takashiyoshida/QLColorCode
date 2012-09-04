@@ -22,17 +22,22 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0E8776570D08E004005040B4 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8776550D08E004005040B4 /* Common.h */; };
-		0E8776580D08E004005040B4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8776560D08E004005040B4 /* Common.m */; };
-		0EB495D50D0FB13C00E86E0B /* colorize.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0ECBBB5D0CFD447E00416538 /* colorize.sh */; };
 		0ECBBA6C0CFCA37500416538 /* QLColorCode.qlgenerator in Copy to Library */ = {isa = PBXBuildFile; fileRef = 8D576316048677EA00EA77CD /* QLColorCode.qlgenerator */; };
-		0EE90E861098CE5800468467 /* Script notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0EE90E851098CE5800468467 /* Script notes.txt */; };
-		2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */; };
-		61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */; };
-		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
 		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
 		C86B05270671AA6E00DD9006 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B05260671AA6E00DD9006 /* CoreServices.framework */; };
+		EA43671C15F6BF9C009DA6C0 /* colorize.sh in Resources */ = {isa = PBXBuildFile; fileRef = EA43671615F6BF9C009DA6C0 /* colorize.sh */; };
+		EA43671D15F6BF9C009DA6C0 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = EA43671715F6BF9C009DA6C0 /* Common.h */; };
+		EA43671E15F6BF9C009DA6C0 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA43671815F6BF9C009DA6C0 /* Common.m */; };
+		EA43671F15F6BF9C009DA6C0 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = EA43671915F6BF9C009DA6C0 /* GeneratePreviewForURL.m */; };
+		EA43672015F6BF9C009DA6C0 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = EA43671A15F6BF9C009DA6C0 /* GenerateThumbnailForURL.m */; };
+		EA43672115F6BF9C009DA6C0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EA43671B15F6BF9C009DA6C0 /* main.c */; };
+		EA43672515F6C00B009DA6C0 /* English.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EA43672315F6C00B009DA6C0 /* English.lproj */; };
+		EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = EA43672B15F6C1B8009DA6C0 /* CHANGELOG */; };
+		EA43673015F6C1B8009DA6C0 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA43672C15F6C1B8009DA6C0 /* COPYING */; };
+		EA43673115F6C1B8009DA6C0 /* INFO in Resources */ = {isa = PBXBuildFile; fileRef = EA43672D15F6C1B8009DA6C0 /* INFO */; };
+		EA43673215F6C1B8009DA6C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = EA43672E15F6C1B8009DA6C0 /* README */; };
+		EA43673415F6C23F009DA6C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA43673315F6C23F009DA6C0 /* Info.plist */; };
 		EAEB7B5815A4FBF7005914E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5715A4FBF7005914E0 /* Foundation.framework */; };
 		EAEB7B5A15A4FC00005914E0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5915A4FC00005914E0 /* WebKit.framework */; };
 		EAEB7B5C15A4FC08005914E0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5B15A4FC08005914E0 /* AppKit.framework */; };
@@ -65,24 +70,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		08FB77B6FE84183AC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		0E51C65F0D04E492007853CB /* ChangeLog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog.txt; sourceTree = "<group>"; };
-		0E8776550D08E004005040B4 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		0E8776560D08E004005040B4 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
-		0EC047F20CFC000A009C986E /* Notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
-		0ECBBB360CFCF98600416538 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		0ECBBB5D0CFD447E00416538 /* colorize.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = colorize.sh; sourceTree = "<group>"; };
-		0EE90E6F1098BE1E00468467 /* Disable XCode QL Plugin.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = "Disable XCode QL Plugin.scpt"; sourceTree = "<group>"; };
-		0EE90E841098CDDF00468467 /* Restore XCode QL Plugin.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; path = "Restore XCode QL Plugin.scpt"; sourceTree = "<group>"; };
-		0EE90E851098CE5800468467 /* Script notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Script notes.txt"; sourceTree = "<group>"; };
-		0EF57E4D0D123DD0006084D5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
-		61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* QLColorCode.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLColorCode.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C86B05260671AA6E00DD9006 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		EA43671615F6BF9C009DA6C0 /* colorize.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = colorize.sh; path = src/colorize.sh; sourceTree = "<group>"; };
+		EA43671715F6BF9C009DA6C0 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = src/Common.h; sourceTree = "<group>"; };
+		EA43671815F6BF9C009DA6C0 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = src/Common.m; sourceTree = "<group>"; };
+		EA43671915F6BF9C009DA6C0 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeneratePreviewForURL.m; path = src/GeneratePreviewForURL.m; sourceTree = "<group>"; };
+		EA43671A15F6BF9C009DA6C0 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenerateThumbnailForURL.m; path = src/GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		EA43671B15F6BF9C009DA6C0 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = "<group>"; };
+		EA43672315F6C00B009DA6C0 /* English.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English.lproj; path = rsrc/English.lproj; sourceTree = "<group>"; };
+		EA43672B15F6C1B8009DA6C0 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
+		EA43672C15F6C1B8009DA6C0 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		EA43672D15F6C1B8009DA6C0 /* INFO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INFO; sourceTree = "<group>"; };
+		EA43672E15F6C1B8009DA6C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		EA43673315F6C23F009DA6C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAEB7B5715A4FBF7005914E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAEB7B5915A4FC00005914E0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EAEB7B5B15A4FC08005914E0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -111,11 +113,10 @@
 		089C166AFE841209C02AAC07 /* QLColorCode */ = {
 			isa = PBXGroup;
 			children = (
-				0EE90E7F1098C84600468467 /* Scripts */,
-				0EC047F20CFC000A009C986E /* Notes.txt */,
-				0ECBBB360CFCF98600416538 /* ReadMe.txt */,
-				0E51C65F0D04E492007853CB /* ChangeLog.txt */,
-				0EF57E4D0D123DD0006084D5 /* LICENSE.txt */,
+				EA43672B15F6C1B8009DA6C0 /* CHANGELOG */,
+				EA43672C15F6C1B8009DA6C0 /* COPYING */,
+				EA43672D15F6C1B8009DA6C0 /* INFO */,
+				EA43672E15F6C1B8009DA6C0 /* README */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
@@ -141,8 +142,8 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8D576317048677EA00EA77CD /* Info.plist */,
-				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
+				EA43673315F6C23F009DA6C0 /* Info.plist */,
+				EA43672315F6C00B009DA6C0 /* English.lproj */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -150,24 +151,14 @@
 		08FB77AFFE84173DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0E8776550D08E004005040B4 /* Common.h */,
-				0E8776560D08E004005040B4 /* Common.m */,
-				61E3BCFA0870B4F2002186A0 /* GenerateThumbnailForURL.m */,
-				2C05A19B06CAA52B00D84F6F /* GeneratePreviewForURL.m */,
-				08FB77B6FE84183AC02AAC07 /* main.c */,
-				0ECBBB5D0CFD447E00416538 /* colorize.sh */,
+				EA43671615F6BF9C009DA6C0 /* colorize.sh */,
+				EA43671715F6BF9C009DA6C0 /* Common.h */,
+				EA43671815F6BF9C009DA6C0 /* Common.m */,
+				EA43671915F6BF9C009DA6C0 /* GeneratePreviewForURL.m */,
+				EA43671A15F6BF9C009DA6C0 /* GenerateThumbnailForURL.m */,
+				EA43671B15F6BF9C009DA6C0 /* main.c */,
 			);
 			name = Source;
-			sourceTree = "<group>";
-		};
-		0EE90E7F1098C84600468467 /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				0EE90E851098CE5800468467 /* Script notes.txt */,
-				0EE90E6F1098BE1E00468467 /* Disable XCode QL Plugin.scpt */,
-				0EE90E841098CDDF00468467 /* Restore XCode QL Plugin.scpt */,
-			);
-			name = Scripts;
 			sourceTree = "<group>";
 		};
 		19C28FB6FE9D52B211CA2CBB /* Products */ = {
@@ -185,7 +176,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8776570D08E004005040B4 /* Common.h in Headers */,
+				EA43671D15F6BF9C009DA6C0 /* Common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,9 +237,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EB495D50D0FB13C00E86E0B /* colorize.sh in Resources */,
 				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
-				0EE90E861098CE5800468467 /* Script notes.txt in Resources */,
+				EA43671C15F6BF9C009DA6C0 /* colorize.sh in Resources */,
+				EA43672515F6C00B009DA6C0 /* English.lproj in Resources */,
+				EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */,
+				EA43673015F6C1B8009DA6C0 /* COPYING in Resources */,
+				EA43673115F6C1B8009DA6C0 /* INFO in Resources */,
+				EA43673215F6C1B8009DA6C0 /* README in Resources */,
+				EA43673415F6C23F009DA6C0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D576312048677EA00EA77CD /* main.c in Sources */,
-				2C05A19C06CAA52B00D84F6F /* GeneratePreviewForURL.m in Sources */,
-				61E3BCFB0870B4F2002186A0 /* GenerateThumbnailForURL.m in Sources */,
-				0E8776580D08E004005040B4 /* Common.m in Sources */,
+				EA43671E15F6BF9C009DA6C0 /* Common.m in Sources */,
+				EA43671F15F6BF9C009DA6C0 /* GeneratePreviewForURL.m in Sources */,
+				EA43672015F6BF9C009DA6C0 /* GenerateThumbnailForURL.m in Sources */,
+				EA43672115F6BF9C009DA6C0 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,10 +307,10 @@
 		8D5B49A704867FD3000E48DA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C167EFE841241C02AAC07 /* English */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
+			path = /Users/tony/Documents/Projects/qlcolorcode;
+			sourceTree = "<absolute>";
 		};
 /* End PBXVariantGroup section */
 

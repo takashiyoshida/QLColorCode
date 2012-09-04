@@ -6,9 +6,11 @@ To package one of these scripts:
 4.  Save
 5.  Package & distribute the resulting app bundle
 
-
 Descriptions:
 
 This script will disable the Quick Look plugin shipped with XCode by renaming it, adding a ".disabled" suffix.
 
 This script will restore the Quick Look plugin shipped with XCode, undoing the effects of the "Disable XCode QL Plugin" application.
+
+See:
+  http://code.google.com/p/qlcolorcode/wiki/ImportantNoteForXcodeUsers

@@ -26,19 +26,17 @@ rsrcDir=$1
 target=$2
 thumb=$3
 
-debug () {
-    if [ "x$qlcc_debug" != "x" ]; then if [ "x$thumb" = "x0" ]; then
-        echo "QLColorCode: $@" 1>&2
-    fi; fi
+function debug () {
+    if [ "x$qlcc_debug" != "x" ]; then
+        if [ "x$thumb" = "x0" ]; then
+            echo "QLColorCode: $@" 1>&2
+        fi;
+    fi
 }
 
 debug Starting colorize.sh
-#echo target is $target
-
 cmd="$pathHL"
 cmdOpts=(-I -k "$font" -K ${fontSizePoints} -q -s ${hlTheme} -u ${textEncoding} ${=extraHLFlags} --validate-input)
-
-#for o in $cmdOpts; do echo $o\<br/\>; done 
 
 debug Setting reader
 reader=(cat $target)
@@ -61,11 +59,11 @@ case $target in
         fi
         ;;
     *.scpt )
-       lang=applescript
-   ;;
-    * ) 
+        lang=applescript
+        ;;
+    * )
         lang=${target##*.}
-    ;;
+        ;;
 esac
 debug Resolved $target to language $lang
 

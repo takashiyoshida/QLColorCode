@@ -37,7 +37,6 @@
 		EA43673015F6C1B8009DA6C0 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA43672C15F6C1B8009DA6C0 /* COPYING */; };
 		EA43673115F6C1B8009DA6C0 /* INFO in Resources */ = {isa = PBXBuildFile; fileRef = EA43672D15F6C1B8009DA6C0 /* INFO */; };
 		EA43673215F6C1B8009DA6C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = EA43672E15F6C1B8009DA6C0 /* README */; };
-		EA43673415F6C23F009DA6C0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA43673315F6C23F009DA6C0 /* Info.plist */; };
 		EAEB7B5815A4FBF7005914E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5715A4FBF7005914E0 /* Foundation.framework */; };
 		EAEB7B5A15A4FC00005914E0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5915A4FC00005914E0 /* WebKit.framework */; };
 		EAEB7B5C15A4FC08005914E0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5B15A4FC08005914E0 /* AppKit.framework */; };
@@ -210,7 +209,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 2CA326220896AD4900168862 /* Build configuration list for PBXProject "QLColorCode" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -244,7 +243,6 @@
 				EA43673015F6C1B8009DA6C0 /* COPYING in Resources */,
 				EA43673115F6C1B8009DA6C0 /* INFO in Resources */,
 				EA43673215F6C1B8009DA6C0 /* README in Resources */,
-				EA43673415F6C23F009DA6C0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 # Created by Nathaniel Gray on 11/27/07.
 # Copyright 2007 Nathaniel Gray.
 
-# Modified by Anthony Gelibert on 7/5/12.
+# Modified by Anthony Gelibert on 12/4/12.
 # Copyright 2012 Anthony Gelibert.
 
 # Expects   $1 = path to resources dir of bundle
@@ -35,8 +35,8 @@ function debug () {
 }
 
 debug Starting colorize.sh
-cmd="$pathHL"
-cmdOpts=(-I -k "$font" -K ${fontSizePoints} -q -s ${hlTheme} -u ${textEncoding} ${=extraHLFlags} --validate-input)
+cmd="${pathHL}"
+cmdOpts=(-I -k "${font}" -K ${fontSizePoints} -q -s ${hlTheme} -u ${textEncoding} ${=extraHLFlags} --validate-input)
 
 debug Setting reader
 reader=(cat $target)
@@ -58,11 +58,28 @@ case $target in
             lang=h
         fi
         ;;
+    *.pde )
+        lang=c
+        ;;
     *.scpt )
         lang=applescript
         ;;
     * )
-        lang=${target##*.}
+        if [[ ${target} = ?*.* ]]; then
+            lang=${target##*.}
+        else
+            ftarget=$(file $target)
+            debug $ftarget
+            if [[ ! -z "$(echo $ftarget | grep -e "[shell|bash|expect] script")" ]]; then
+                lang=sh
+            elif [[ ! -z "$(echo $ftarget | grep -e "ruby")" ]]; then
+                lang=ruby;
+            elif [[ ! -z "$(echo $ftarget | grep "python")" ]]; then
+                lang=py;
+            else
+                exit 102
+            fi;
+        fi
         ;;
 esac
 debug Resolved $target to language $lang

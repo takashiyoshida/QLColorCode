@@ -17,7 +17,6 @@
 				<string>com.apple.property-list</string>
 				<string>org.tug.tex</string>
 				<string>public.plain-text</string>
-				<string>public.unix-executable</string>
 			</array>
 		</dict>
 	</array>
@@ -659,16 +658,6 @@
 					<string>cfml</string>
 				</array>
 			</dict>
-		</dict>
-		<dict>
-			<key>UTTypeConformsTo</key>
-			<array>
-				<string>public.unix-executable</string>
-			</array>
-			<key>UTTypeDescription</key>
-			<string>Script without extension</string>
-			<key>UTTypeIdentifier</key>
-			<string>public.unix-executable</string>
 		</dict>
 	</array>
 </dict>

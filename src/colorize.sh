@@ -47,6 +47,9 @@ case $target in
         # some omnigraffle files are XML and get passed to us.  Ignore them.
         exit 1
         ;;
+    *.pde )
+        lang=c
+        ;;
     *.plist )
         lang=xml
         reader=(/usr/bin/plutil -convert xml1 -o - $target)

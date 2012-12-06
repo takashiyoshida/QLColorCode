@@ -17,6 +17,7 @@
 				<string>com.apple.property-list</string>
 				<string>org.tug.tex</string>
 				<string>public.plain-text</string>
+				<string>dyn.ah62d4rv4ge81a3df</string>
 			</array>
 		</dict>
 	</array>
@@ -656,6 +657,23 @@
 					<string>cfc</string>
 					<string>cfm</string>
 					<string>cfml</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge81a3df</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>PDE files</string>
+			<key>UTTypeIdentifier</key>
+			<string>dyn.ah62d4rv4ge81a3df</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>pde</string>
 				</array>
 			</dict>
 		</dict>

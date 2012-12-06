@@ -50,6 +50,9 @@ case $target in
     *.pde )
         lang=c
         ;;
+    *.ino )
+        lang=c
+        ;;
     *.plist )
         lang=xml
         reader=(/usr/bin/plutil -convert xml1 -o - $target)

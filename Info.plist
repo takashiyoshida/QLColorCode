@@ -18,6 +18,7 @@
 				<string>org.tug.tex</string>
 				<string>public.plain-text</string>
 				<string>dyn.ah62d4rv4ge81a3df</string>
+				<string>dyn.ah62d4rv4ge80w5xt</string>
 			</array>
 		</dict>
 	</array>
@@ -674,6 +675,23 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>pde</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge80w5xt</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>INO files</string>
+			<key>UTTypeIdentifier</key>
+			<string>dyn.ah62d4rv4ge80w5xt</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>ino</string>
 				</array>
 			</dict>
 		</dict>

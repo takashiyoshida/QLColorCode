@@ -5,35 +5,42 @@ QLColorCode
 This is a Quick Look plugin that renders source code with syntax highlighting,
 using the Highlight library: <http://www.andre-simon.de/index.html>
 
-To install the plugin, just drag it to /Library/QuickLook or ~/Library/QuickLook.
+To install the plugin, just drag it to `/Library/QuickLook` or `~/Library/QuickLook`.
 You may need to create that folder if it doesn't already exist.
 
-If you want to configure QLColorCode, there are several "defaults" commands 
+If you want to configure `QLColorCode`, there are several "defaults" commands 
 that could be useful:
 
-Setting the text encoding (default is UTF-8).  Two settings are required.  The
+Setting the text encoding (default is `UTF-8`).  Two settings are required.  The
 first sets Highlight's encoding, the second sets Webkit's:
+
     defaults write org.n8gray.QLColorCode textEncoding UTF-16
     defaults write org.n8gray.QLColorCode webkitTextEncoding UTF-16
     
 Setting the font:
+
     defaults write org.n8gray.QLColorCode font Monaco
     
 the font size:
+
     defaults write org.n8gray.QLColorCode fontSizePoints 9
     
 the color style (see http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples
 or try slateGreen to see how I roll.  Also included are solarized-light and solarized-dark
 as seen at http://ethanschoonover.com/solarized):
+
     defaults write org.n8gray.QLColorCode hlTheme ide-xcode
     
 any extra command-line flags for Highlight (see below):
+
     defaults write org.n8gray.QLColorCode extraHLFlags '-l -W'
     
 the maximum size (in bytes) for previewed files:
+
     defaults write org.n8gray.QLColorCode maxFileSize 1000000
 
 Here are some useful 'highlight' command-line flags (from the man page):
+
        -F, --reformat=<style>
               reformat output in given style.   <style>=[ansi,  gnu,  kr,
               java, linux]
@@ -77,7 +84,7 @@ desktop then back to its installed location should do the trick.
 
 To build from source, you need the Highlight library.  Download the source and 
 uncompress it somewhere, then make a symbolic link to that location from 
-./highlight
+`./highlight`
 
 As an aside, by changing colorize.sh you can use this plugin to render any file
 type that you can convert to HTML.  Have fun, and let me know if you do anything

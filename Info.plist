@@ -19,6 +19,7 @@
 				<string>public.plain-text</string>
 				<string>dyn.ah62d4rv4ge81a3df</string>
 				<string>dyn.ah62d4rv4ge80w5xt</string>
+				<string>dyn.ah62d4rv4ge80w5xg</string>
 			</array>
 		</dict>
 	</array>
@@ -693,6 +694,23 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>ino</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge80w5xg</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>dyn.ah62d4rv4ge80w5xg</string>
+			<key>UTTypeDescription</key>
+			<string>INF files</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>inf</string>
 				</array>
 			</dict>
 		</dict>

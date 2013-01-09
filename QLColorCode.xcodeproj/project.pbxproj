@@ -36,7 +36,7 @@
 		EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = EA43672B15F6C1B8009DA6C0 /* CHANGELOG */; };
 		EA43673015F6C1B8009DA6C0 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA43672C15F6C1B8009DA6C0 /* COPYING */; };
 		EA43673115F6C1B8009DA6C0 /* INFO in Resources */ = {isa = PBXBuildFile; fileRef = EA43672D15F6C1B8009DA6C0 /* INFO */; };
-		EA43673215F6C1B8009DA6C0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = EA43672E15F6C1B8009DA6C0 /* README */; };
+		EAE9D2CC169E2B3500A67B2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EAE9D2CB169E2B3500A67B2F /* README.md */; };
 		EAEB7B5815A4FBF7005914E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5715A4FBF7005914E0 /* Foundation.framework */; };
 		EAEB7B5A15A4FC00005914E0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5915A4FC00005914E0 /* WebKit.framework */; };
 		EAEB7B5C15A4FC08005914E0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5B15A4FC08005914E0 /* AppKit.framework */; };
@@ -82,8 +82,8 @@
 		EA43672B15F6C1B8009DA6C0 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
 		EA43672C15F6C1B8009DA6C0 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		EA43672D15F6C1B8009DA6C0 /* INFO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INFO; sourceTree = "<group>"; };
-		EA43672E15F6C1B8009DA6C0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		EA43673315F6C23F009DA6C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE9D2CB169E2B3500A67B2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		EAEB7B5715A4FBF7005914E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAEB7B5915A4FC00005914E0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EAEB7B5B15A4FC08005914E0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -115,7 +115,7 @@
 				EA43672B15F6C1B8009DA6C0 /* CHANGELOG */,
 				EA43672C15F6C1B8009DA6C0 /* COPYING */,
 				EA43672D15F6C1B8009DA6C0 /* INFO */,
-				EA43672E15F6C1B8009DA6C0 /* README */,
+				EAE9D2CB169E2B3500A67B2F /* README.md */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
@@ -242,7 +242,7 @@
 				EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */,
 				EA43673015F6C1B8009DA6C0 /* COPYING in Resources */,
 				EA43673115F6C1B8009DA6C0 /* INFO in Resources */,
-				EA43673215F6C1B8009DA6C0 /* README in Resources */,
+				EAE9D2CC169E2B3500A67B2F /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,6 +47,9 @@ case $target in
         # some omnigraffle files are XML and get passed to us.  Ignore them.
         exit 1
         ;;
+    *.ps )
+        exit 1
+        ;;
     *.pde )
         lang=c
         ;;

@@ -21,6 +21,7 @@
 				<string>dyn.ah62d4rv4ge80w5xt</string>
 				<string>dyn.ah62d4rv4ge80w5xg</string>
 				<string>com.sun.java-class</string>
+				<string>dyn.ah62d4rv4ge8043u</string>
 			</array>
 		</dict>
 	</array>
@@ -712,6 +713,23 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>inf</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>dyn.ah62d4rv4ge8043u</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>dyn.ah62d4rv4ge8043u</string>
+			<key>UTTypeDescription</key>
+			<string>MF files</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>mf</string>
 				</array>
 			</dict>
 		</dict>

@@ -60,6 +60,9 @@ case $target in
     *.ino )
         lang=c
         ;;
+    *.mf )
+        lang=txt
+        ;;
     *.plist )
         lang=xml
         reader=(/usr/bin/plutil -convert xml1 -o - $target)

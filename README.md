@@ -1,14 +1,14 @@
 QLColorCode
 ===========
-<http://code.google.com/p/qlcolorcode/>
+**Original Project:** <http://code.google.com/p/qlcolorcode/>
 
 This is a Quick Look plugin that renders source code with syntax highlighting,
-using the Highlight library: <http://www.andre-simon.de/index.html>
+using the [Highlight library](http://www.andre-simon.de/index.html).
 
 To install the plugin, just drag it to `/Library/QuickLook` or `~/Library/QuickLook`.
 You may need to create that folder if it doesn't already exist.
 
-If you want to configure `QLColorCode`, there are several "defaults" commands 
+If you want to configure `QLColorCode`, there are several `defaults` commands 
 that could be useful:
 
 Setting the text encoding (default is `UTF-8`).  Two settings are required.  The
@@ -17,17 +17,15 @@ first sets Highlight's encoding, the second sets Webkit's:
     defaults write org.n8gray.QLColorCode textEncoding UTF-16
     defaults write org.n8gray.QLColorCode webkitTextEncoding UTF-16
     
-Setting the font:
+Setting the font (default is `Menlo`):
 
     defaults write org.n8gray.QLColorCode font Monaco
     
-the font size:
+the font size (default is `10`):
 
     defaults write org.n8gray.QLColorCode fontSizePoints 9
     
-the color style (see http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples
-or try slateGreen to see how I roll.  Also included are solarized-light and solarized-dark
-as seen at http://ethanschoonover.com/solarized):
+the color style (default is `edit-xcode`, see [all available themes](http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples)):
 
     defaults write org.n8gray.QLColorCode hlTheme ide-xcode
     
@@ -35,7 +33,7 @@ any extra command-line flags for Highlight (see below):
 
     defaults write org.n8gray.QLColorCode extraHLFlags '-l -W'
     
-the maximum size (in bytes) for previewed files:
+the maximum size (in bytes, deactivated by default) for previewed files:
 
     defaults write org.n8gray.QLColorCode maxFileSize 1000000
 
@@ -70,6 +68,11 @@ Here are some useful 'highlight' command-line flags (from the man page):
        --kw-case=<upper|lower|capitalize>
               control case of case insensitive keywords
 
+This version of the plugin use an external Highlight. By default, it uses `/opt/local/bin/highlight` but it can be changed:
+    
+    defaults write org.n8gray.QLColorCode pathHL /usr/local/bin/highlight 
+
+
 Highlight can handle lots and lots of languages, but this plugin will only be 
 invoked for file types that the OS knows are type "source-code".  Since the OS
 only knows about a limited number of languages, I've added Universal Type 
@@ -82,14 +85,6 @@ cause problems.  Note that if you do edit the Info.plist file you need to
 nudge the system to tell it something has changed.  Moving the plugin to the
 desktop then back to its installed location should do the trick.
 
-To build from source, you need the Highlight library.  Download the source and 
-uncompress it somewhere, then make a symbolic link to that location from 
-`./highlight`
-
 As an aside, by changing colorize.sh you can use this plugin to render any file
 type that you can convert to HTML.  Have fun, and let me know if you do anything
 cool!
-
-Cheers,
--n8
-n8gray /at/ n8gray \dot\ org

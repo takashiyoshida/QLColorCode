@@ -20,6 +20,7 @@
 				<string>dyn.ah62d4rv4ge81a3df</string>
 				<string>dyn.ah62d4rv4ge80w5xt</string>
 				<string>dyn.ah62d4rv4ge80w5xg</string>
+				<string>com.sun.java-class</string>
 			</array>
 		</dict>
 	</array>
@@ -64,7 +65,7 @@
 	<key>QLSupportsConcurrentRequests</key>
 	<true/>
 	<key>QLThumbnailMinimumSize</key>
-	<real>32</real>
+	<integer>8</integer>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -711,6 +712,23 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>inf</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>com.sun.java-class</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>com.sun.java-class</string>
+			<key>UTTypeDescription</key>
+			<string>Java Class</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>class</string>
 				</array>
 			</dict>
 		</dict>

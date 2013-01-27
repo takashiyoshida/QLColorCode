@@ -35,7 +35,6 @@
 		EA43672515F6C00B009DA6C0 /* English.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EA43672315F6C00B009DA6C0 /* English.lproj */; };
 		EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = EA43672B15F6C1B8009DA6C0 /* CHANGELOG */; };
 		EA43673015F6C1B8009DA6C0 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = EA43672C15F6C1B8009DA6C0 /* COPYING */; };
-		EA43673115F6C1B8009DA6C0 /* INFO in Resources */ = {isa = PBXBuildFile; fileRef = EA43672D15F6C1B8009DA6C0 /* INFO */; };
 		EAE9D2CC169E2B3500A67B2F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EAE9D2CB169E2B3500A67B2F /* README.md */; };
 		EAEB7B5815A4FBF7005914E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5715A4FBF7005914E0 /* Foundation.framework */; };
 		EAEB7B5A15A4FC00005914E0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB7B5915A4FC00005914E0 /* WebKit.framework */; };
@@ -81,7 +80,6 @@
 		EA43672315F6C00B009DA6C0 /* English.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English.lproj; path = rsrc/English.lproj; sourceTree = "<group>"; };
 		EA43672B15F6C1B8009DA6C0 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
 		EA43672C15F6C1B8009DA6C0 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
-		EA43672D15F6C1B8009DA6C0 /* INFO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INFO; sourceTree = "<group>"; };
 		EA43673315F6C23F009DA6C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE9D2CB169E2B3500A67B2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		EAEB7B5715A4FBF7005914E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,7 +112,6 @@
 			children = (
 				EA43672B15F6C1B8009DA6C0 /* CHANGELOG */,
 				EA43672C15F6C1B8009DA6C0 /* COPYING */,
-				EA43672D15F6C1B8009DA6C0 /* INFO */,
 				EAE9D2CB169E2B3500A67B2F /* README.md */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -241,7 +238,6 @@
 				EA43672515F6C00B009DA6C0 /* English.lproj in Resources */,
 				EA43672F15F6C1B8009DA6C0 /* CHANGELOG in Resources */,
 				EA43673015F6C1B8009DA6C0 /* COPYING in Resources */,
-				EA43673115F6C1B8009DA6C0 /* INFO in Resources */,
 				EAE9D2CC169E2B3500A67B2F /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

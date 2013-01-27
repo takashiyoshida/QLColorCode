@@ -50,6 +50,10 @@ case $target in
     *.ps )
         exit 1
         ;;
+    *.class )
+        lang=java
+        reader=(/usr/local/bin/jad -ff -dead -noctor -p -t $target)
+        ;;
     *.pde )
         lang=c
         ;;

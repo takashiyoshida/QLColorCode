@@ -1,7 +1,8 @@
 QLColorCode
 ===========
-**Original Project:** <http://code.google.com/p/qlcolorcode/>
-
+**Original project:** <http://code.google.com/p/qlcolorcode/>
+**This project:** <http://anthonygelibert.github.com/QLColorCode>
+ 
 This is a Quick Look plugin that renders source code with syntax highlighting,
 using the [Highlight library](http://www.andre-simon.de/index.html).
 

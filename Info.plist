@@ -17,11 +17,7 @@
 				<string>com.apple.property-list</string>
 				<string>org.tug.tex</string>
 				<string>public.plain-text</string>
-				<string>dyn.ah62d4rv4ge81a3df</string>
-				<string>dyn.ah62d4rv4ge80w5xt</string>
-				<string>dyn.ah62d4rv4ge80w5xg</string>
 				<string>com.sun.java-class</string>
-				<string>dyn.ah62d4rv4ge8043u</string>
 			</array>
 		</dict>
 	</array>
@@ -668,12 +664,12 @@
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>dyn.ah62d4rv4ge81a3df</string>
+				<string>public.source-code</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>PDE files</string>
 			<key>UTTypeIdentifier</key>
-			<string>dyn.ah62d4rv4ge81a3df</string>
+			<string>org.arduino.pde-source</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -685,12 +681,12 @@
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>dyn.ah62d4rv4ge80w5xt</string>
+				<string>public.source-code</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>INO files</string>
 			<key>UTTypeIdentifier</key>
-			<string>dyn.ah62d4rv4ge80w5xt</string>
+			<string>org.arduino.ino-source</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -702,10 +698,10 @@
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>dyn.ah62d4rv4ge80w5xg</string>
+				<string>public.plain-text</string>
 			</array>
 			<key>UTTypeIdentifier</key>
-			<string>dyn.ah62d4rv4ge80w5xg</string>
+			<string>org.microsoft.inf</string>
 			<key>UTTypeDescription</key>
 			<string>INF files</string>
 			<key>UTTypeTagSpecification</key>
@@ -719,10 +715,10 @@
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>dyn.ah62d4rv4ge8043u</string>
+				<string>public.source-code</string>
 			</array>
 			<key>UTTypeIdentifier</key>
-			<string>dyn.ah62d4rv4ge8043u</string>
+			<string>com.sun.manifest</string>
 			<key>UTTypeDescription</key>
 			<string>MF files</string>
 			<key>UTTypeTagSpecification</key>

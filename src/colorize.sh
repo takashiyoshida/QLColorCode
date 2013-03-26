@@ -63,6 +63,9 @@ case $target in
     *.mf )
         lang=txt
         ;;
+    *.scpt )
+        exit 1;
+        ;;
     *.plist )
         lang=xml
         reader=(/usr/bin/plutil -convert xml1 -o - $target)

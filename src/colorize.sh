@@ -70,6 +70,13 @@ case $target in
         lang=xml
         reader=(/usr/bin/plutil -convert xml1 -o - $target)
         ;;
+    *.sql )
+        if grep -q "SQLite 3.x database" $(file -b $target); then
+            lang=sql
+        else
+            exit 1;
+        fi
+        ;;
     *.h )
         if grep -q "@interface" $target &> /dev/null; then
             lang=objc

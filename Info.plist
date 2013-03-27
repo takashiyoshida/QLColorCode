@@ -634,7 +634,7 @@
 			<key>UTTypeDescription</key>
 			<string>Scala Source Code</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.scala-lang.scala</string>
+			<string>org.scala.source</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -670,7 +670,7 @@
 			<key>UTTypeDescription</key>
 			<string>PDE files</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.arduino.pde-source</string>
+			<string>org.arduino.pde.source</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

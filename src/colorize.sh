@@ -43,25 +43,18 @@ reader=(cat $target)
 
 debug Handling special cases
 case $target in
-    *.graffle )
-        # some omnigraffle files are XML and get passed to us.  Ignore them.
-        exit 1
-        ;;
-    *.ps )
+    *.graffle | *.ps )
         exit 1
         ;;
     *.class )
         lang=java
         reader=(/usr/local/bin/jad -ff -dead -noctor -p -t $target)
         ;;
-    *.pde )
+    *.pde | *.ino )
         lang=c
         ;;
-    *.ino )
-        lang=c
-        ;;
-    *.mf )
-        lang=txt
+    *.rdf | *.xul )
+        lang=xml
         ;;
     *.ascr | *.scpt )
         lang=applescript

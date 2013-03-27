@@ -71,7 +71,10 @@ case $target in
             exit 1;
         fi
         ;;
-    *.h )
+    *.m)
+        lang=objc
+        ;;
+    *.pch | *.h )
         if grep -q "@interface" $target &> /dev/null; then
             lang=objc
         else

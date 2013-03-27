@@ -63,8 +63,9 @@ case $target in
     *.mf )
         lang=txt
         ;;
-    *.scpt )
-        exit 1;
+    *.ascr | *.scpt )
+        lang=applescript
+        reader=(/usr/bin/osadecompile $target)
         ;;
     *.plist )
         lang=xml
@@ -83,9 +84,6 @@ case $target in
         else
             lang=h
         fi
-        ;;
-    *.scpt )
-        lang=applescript
         ;;
     * )
         lang=${target##*.}

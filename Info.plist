@@ -685,6 +685,23 @@
 				<string>public.source-code</string>
 			</array>
 			<key>UTTypeDescription</key>
+			<string>ASCR files</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.applescript.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>ascr</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeDescription</key>
 			<string>INO files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.arduino.ino-source</string>

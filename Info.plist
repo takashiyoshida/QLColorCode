@@ -798,6 +798,23 @@
 				</array>
 			</dict>
 		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>com.sun.javafx</string>
+			<key>UTTypeDescription</key>
+			<string>JavaFX ML</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>fxml</string>
+				</array>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>

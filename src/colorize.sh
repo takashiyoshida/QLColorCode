@@ -46,6 +46,9 @@ case $target in
     *.graffle | *.ps )
         exit 1
         ;;
+    *.fxml )
+        lang=fx
+        ;;
     *.class )
         lang=java
         reader=(/usr/local/bin/jad -ff -dead -noctor -p -t $target)

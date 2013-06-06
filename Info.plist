@@ -62,7 +62,7 @@
 	<key>QLSupportsConcurrentRequests</key>
 	<true/>
 	<key>QLThumbnailMinimumSize</key>
-	<integer>4</integer>
+	<integer>32</integer>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

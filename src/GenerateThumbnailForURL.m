@@ -6,7 +6,7 @@
 #include <WebKit/WebKit.h>
 #import "Common.h"
 
-#define minSize 4
+#define minSize 32
 
 /* -----------------------------------------------------------------------------
     Generate a thumbnail for file

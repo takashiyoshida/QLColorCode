@@ -36,7 +36,6 @@ function debug () {
 
 debug Starting colorize.sh
 cmd="$pathHL"
-cmdOpts=(-I -k "$font" -K ${fontSizePoints} -q -s ${hlTheme} -u ${textEncoding} ${=extraHLFlags} --validate-input)
 
 debug Setting reader
 reader=(cat $target)
@@ -49,9 +48,14 @@ case $target in
     *.fxml )
         lang=fx
         ;;
+    *.java )
+        lang=java
+        plugin=(--plug-in java_library)
+        ;;
     *.class )
         lang=java
         reader=(/usr/local/bin/jad -ff -dead -noctor -p -t $target)
+        plugin=(--plug-in java_library)
         ;;
     *.pde | *.ino )
         lang=c
@@ -84,11 +88,29 @@ case $target in
             lang=h
         fi
         ;;
+    *.pl )
+        lang=pl
+        plugin=(--plug-in perl_ref_perl_org)
+        ;;
+    *.py )
+        lang=py
+        plugin=(--plug-in python_ref_python_org)
+        ;;
+    *.sh | *.zsh )
+        lang=sh
+        plugin=(--plug-in bash_functions)
+        ;;
+    *.scala )
+        lang=scala
+        plugin=(--plug-in scala_ref_scala_lang_org)
+        ;;
     * )
         lang=${target##*.}
         ;;
 esac
 debug Resolved $target to language $lang
+
+cmdOpts=(${plugin} -I -k "$font" -K ${fontSizePoints} -q -s ${hlTheme} -u ${textEncoding} ${=extraHLFlags} --validate-input)
 
 go4it () {
     debug Generating the preview

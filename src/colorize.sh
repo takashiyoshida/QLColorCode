@@ -60,6 +60,10 @@ case $target in
     *.pde | *.ino )
         lang=c
         ;;
+    *.c | *.cpp )
+        plugin+=(--plug-in cpp_syslog --plug-in cpp_ref_cplusplus_com --plug-in cpp_ref_local_includes)
+        lang=${target##*.}
+        ;;
     *.rdf | *.xul | *.ecore)
         lang=xml
         ;;

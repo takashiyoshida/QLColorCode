@@ -45,9 +45,6 @@ case $target in
     *.graffle | *.ps )
         exit 1
         ;;
-    *.ecore )
-        lang=xml
-        ;;
     *.fxml )
         lang=fx
         ;;
@@ -63,7 +60,7 @@ case $target in
     *.pde | *.ino )
         lang=c
         ;;
-    *.rdf | *.xul )
+    *.rdf | *.xul | *.ecore)
         lang=xml
         ;;
     *.ascr | *.scpt )

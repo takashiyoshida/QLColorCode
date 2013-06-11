@@ -45,6 +45,9 @@ case $target in
     *.graffle | *.ps )
         exit 1
         ;;
+    *.ecore )
+        lang=xml
+        ;;
     *.fxml )
         lang=fx
         ;;

@@ -816,6 +816,23 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>org.nfo</string>
+			<key>UTTypeDescription</key>
+			<string>NFO files</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>nfo</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
 			<key>UTTypeDescription</key>
 			<string>ECore files</string>
 			<key>UTTypeConformsTo</key>

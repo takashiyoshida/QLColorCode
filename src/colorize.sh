@@ -51,6 +51,9 @@ case $target in
     *.fxml )
         lang=fx
         ;;
+    *.sb )
+        lang=lisp
+        ;;
     *.java )
         lang=java
         plugin=(--plug-in java_library)

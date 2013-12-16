@@ -850,6 +850,23 @@
 				</array>
 			</dict>
 		</dict>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>ATL files</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>org.km3</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>atl</string>
+				</array>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>

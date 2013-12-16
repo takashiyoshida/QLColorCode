@@ -45,7 +45,7 @@ case $target in
     *.graffle | *.ps )
         exit 1
         ;;
-    *.nfo )
+    *.nfo | *.atl )
         lang=txt
         ;;
     *.fxml )

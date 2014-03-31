@@ -405,6 +405,23 @@
 				<string>public.source-code</string>
 			</array>
 			<key>UTTypeDescription</key>
+			<string>Go Source File</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.go.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>go</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeDescription</key>
 			<string>IDL Source File</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.n8gray.idl</string>

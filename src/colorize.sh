@@ -105,13 +105,16 @@ case $target in
         lang=py
         plugin=(--plug-in python_ref_python_org)
         ;;
-    *.sh | *.zsh | *.bash )
+    *.sh | *.zsh | *.bash | *.csh | *.fish )
         lang=sh
         plugin=(--plug-in bash_functions)
         ;;
     *.scala )
         lang=scala
         plugin=(--plug-in scala_ref_scala_lang_org)
+        ;;
+    *.cfg )
+        lang=ini
         ;;
     * )
         lang=${target##*.}

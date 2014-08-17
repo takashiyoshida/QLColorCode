@@ -935,6 +935,23 @@
 				</array>
 			</dict>
 		</dict>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>BASH config files</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>org.bash.config</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>bashrc</string>
+				</array>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>

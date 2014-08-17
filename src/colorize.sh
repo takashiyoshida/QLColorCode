@@ -105,7 +105,7 @@ case $target in
         lang=py
         plugin=(--plug-in python_ref_python_org)
         ;;
-    *.sh | *.zsh | *.bash | *.csh | *.fish )
+    *.sh | *.zsh | *.bash | *.csh | *.fish | *.bashrc )
         lang=sh
         plugin=(--plug-in bash_functions)
         ;;

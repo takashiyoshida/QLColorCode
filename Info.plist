@@ -886,7 +886,7 @@
 		</dict>
 		<dict>
 			<key>UTTypeDescription</key>
-			<string>Fish config files</string>
+			<string>Fish source files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
@@ -898,6 +898,40 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>fish</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>Coffee source files</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>org.coffee.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>coffee</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>CSON source files</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>org.cson.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>cson</string>
 				</array>
 			</dict>
 		</dict>

@@ -1,32 +1,28 @@
 #!/usr/bin/env zsh -f
 
+###############################################################################
 # This code is licensed under the GPL v2.  See LICENSE.txt for details.
-
-# colorize.sh
-# QLColorCode
 #
-# Created by Nathaniel Gray on 11/27/07.
 # Copyright 2007 Nathaniel Gray.
-
-# Modified by Anthony Gelibert on 7/5/12.
-# Copyright 2012 Anthony Gelibert.
-
+# Copyright 2012-2014 Anthony Gelibert.
+#
 # Expects   $1 = path to resources dir of bundle
 #           $2 = name of file to colorize
 #           $3 = 1 if you want enough for a thumbnail, 0 for the full file
 #
 # Produces HTML on stdout with exit code 0 on success
-
 ###############################################################################
 
 # Fail immediately on failure of sub-command
 setopt err_exit
 
-rsrcDir=$1
-target=$2
-thumb=$3
+# Set the read-only variables
+rsrcDir="$1"
+target="$2"
+thumb="$3"
+cmd="$pathHL"
 
-function debug () {
+function debug() {
     if [ "x$qlcc_debug" != "x" ]; then
         if [ "x$thumb" = "x0" ]; then
             echo "QLColorCode: $@" 1>&2
@@ -34,14 +30,11 @@ function debug () {
     fi
 }
 
-debug Starting colorize.sh
-cmd="$pathHL"
+debug "Starting colorize.sh by setting reader"
+reader=(cat ${target})
 
-debug Setting reader
-reader=(cat $target)
-
-debug Handling special cases
-case $target in
+debug "Handling special cases"
+case ${target} in
     *.graffle | *.ps )
         exit 1
         ;;
@@ -60,7 +53,7 @@ case $target in
         ;;
     *.class )
         lang=java
-        reader=(/usr/local/bin/jad -ff -dead -noctor -p -t $target)
+        reader=(/usr/local/bin/jad -ff -dead -noctor -p -t ${target})
         plugin=(--plug-in java_library)
         ;;
     *.pde | *.ino )
@@ -70,28 +63,28 @@ case $target in
         plugin+=(--plug-in cpp_syslog --plug-in cpp_ref_cplusplus_com --plug-in cpp_ref_local_includes)
         lang=${target##*.}
         ;;
-    *.rdf | *.xul | *.ecore)
+    *.rdf | *.xul | *.ecore )
         lang=xml
         ;;
     *.ascr | *.scpt )
         lang=applescript
-        reader=(/usr/bin/osadecompile $target)
+        reader=(/usr/bin/osadecompile ${target})
         ;;
     *.plist )
         lang=xml
-        reader=(/usr/bin/plutil -convert xml1 -o - $target)
+        reader=(/usr/bin/plutil -convert xml1 -o - ${target})
         ;;
     *.sql )
-        if grep -q -E "SQLite .* database" <(file -b $target); then
+        if grep -q -E "SQLite .* database" <(file -b ${target}); then
             exit 1
         fi
         lang=sql
         ;;
-    *.m)
+    *.m )
         lang=objc
         ;;
     *.pch | *.h )
-        if grep -q "@interface" <($target) &> /dev/null; then
+        if grep -q "@interface" <(${target}) &> /dev/null; then
             lang=objc
         else
             lang=h
@@ -120,28 +113,24 @@ case $target in
         lang=${target##*.}
         ;;
 esac
-debug Resolved $target to language $lang
 
-cmdOpts=(${plugin} -I -k "$font" -K ${fontSizePoints} -q -s ${hlTheme} -u ${textEncoding} ${=extraHLFlags} --validate-input)
+debug "Resolved ${target} to language $lang"
+
+cmdOpts=(${plugin} --syntax=${lang} --quiet --include-style --font="$font" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
 
 go4it () {
-    debug Generating the preview
-    local title="`basename ${target}`"
+    debug "Generating the preview"
     if [ $thumb = "1" ]; then
-        $reader | head -n 100 | head -c 20000 | $cmd -S $lang $cmdOpts && exit 0
+        ${reader} | head -n 100 | head -c 20000 | ${cmd} ${cmdOpts} && exit 0
     elif [ -n "$maxFileSize" ]; then
-        $reader | head -c $maxFileSize | $cmd -T "${title}" -S $lang $cmdOpts && exit 0
+        ${reader} | head -c $maxFileSize | ${cmd} -T "${target}" ${cmdOpts} && exit 0
     else
-        $reader | $cmd -T "${title}" -S $lang $cmdOpts && exit 0
+        ${reader} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
     fi
 }
 
 setopt no_err_exit
-debug First try...
-go4it
-# Uh-oh, it didn't work.  Fall back to rendering the file as plain
-debug First try failed, second try...
-lang=txt
+# We only try one time as we use --validate-input option that fall to plain text if invalid input.
 go4it
 debug Reached the end of the file.  That should not happen.
 exit 101

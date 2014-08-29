@@ -937,18 +937,35 @@
 		</dict>
 		<dict>
 			<key>UTTypeDescription</key>
-			<string>BASH config files</string>
+			<string>Shell script</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
 			<key>UTTypeIdentifier</key>
-			<string>org.bash.config</string>
+			<string>org.bash.source</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
 				<array>
 					<string>bashrc</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>INNO source files</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>org.inno.source</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>iss</string>
 				</array>
 			</dict>
 		</dict>

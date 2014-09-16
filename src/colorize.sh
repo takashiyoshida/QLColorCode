@@ -106,7 +106,7 @@ case ${target} in
         lang=scala
         plugin=(--plug-in scala_ref_scala_lang_org)
         ;;
-    *.cfg )
+    *.cfg | *.properties | *.conf )
         lang=ini
         ;;
     * )

@@ -60,8 +60,8 @@ case ${target} in
         lang=c
         ;;
     *.c | *.cpp )
-        plugin+=(--plug-in cpp_syslog --plug-in cpp_ref_cplusplus_com --plug-in cpp_ref_local_includes)
         lang=${target##*.}
+        plugin=(--plug-in cpp_syslog --plug-in cpp_ref_cplusplus_com --plug-in cpp_ref_local_includes)
         ;;
     *.rdf | *.xul | *.ecore )
         lang=xml

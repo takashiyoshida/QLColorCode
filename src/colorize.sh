@@ -44,6 +44,9 @@ case ${target} in
     *.fxml )
         lang=fx
         ;;
+    *.s | *.s79 )
+        lang=assembler
+        ;;
     *.sb )
         lang=lisp
         ;;

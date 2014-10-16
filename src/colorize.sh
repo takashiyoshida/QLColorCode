@@ -112,6 +112,9 @@ case ${target} in
     *.cfg | *.properties | *.conf )
         lang=ini
         ;;
+    *.kmt )
+        lang=scala
+        ;;
     * )
         lang=${target##*.}
         ;;

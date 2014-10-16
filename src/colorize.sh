@@ -38,7 +38,7 @@ case ${target} in
     *.graffle | *.ps )
         exit 1
         ;;
-    *.nfo | *.atl )
+    *.nfo | *.atl | *.log )
         lang=txt
         ;;
     *.fxml )

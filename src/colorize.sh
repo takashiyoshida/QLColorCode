@@ -122,17 +122,17 @@ esac
 
 debug "Resolved ${target} to language $lang"
 
-cmdOpts=(${plugin} --syntax=${lang} --quiet --include-style --font="$font" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
+cmdOpts=(${plugin} --syntax=${lang} --quiet --include-style --font="${font}" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
 
 go4it () {
     debug "Generating the preview"
-    if [ $thumb = "1" ]; then
+    if [ ${thumb} = "1" ]; then
         ${reader} | head -n 100 | head -c 20000 | ${cmd} ${cmdOpts} && exit 0
-    elif [ -n "$maxFileSize" ]; then
-        ${reader} | head -c $maxFileSize | ${cmd} -T "${target}" ${cmdOpts} && exit 0
+    elif [ -n "${maxFileSize}" ]; then
+        ${reader} | head -c ${maxFileSize} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
     else
-        ${reader} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
-    fi
+            ${reader} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
+ 	   fi
 }
 
 setopt no_err_exit

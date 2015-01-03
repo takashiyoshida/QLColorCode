@@ -38,8 +38,11 @@ case ${target} in
     *.graffle | *.ps )
         exit 1
         ;;
-    *.nfo | *.atl | *.log | *.ld)
+    *.nfo | *.atl | *.log | *.ld | *.map)
         lang=txt
+        ;;
+    *.d )
+        lang=make
         ;;
     *.fxml )
         lang=fx

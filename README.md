@@ -1,20 +1,17 @@
-QLColorCode
-===========
+# QLColorCode
+
 **Original project:** <http://code.google.com/p/qlcolorcode/>
 
-**Warning:** since Mac OS X 10.10, the plugin should be installed in /Library/QuickLook to work correctly. Problem under investigation. 
- 
 This is a Quick Look plugin that renders source code with syntax highlighting,
 using the [Highlight library](http://www.andre-simon.de).
 
-To install the plugin, just drag it to `/Library/QuickLook` or `~/Library/QuickLook`.
+To install the plugin, just drag it to `/Library/QuickLook`.
 You may need to create that folder if it doesn't already exist.
 
-If you want to configure `QLColorCode`, there are several `defaults` commands 
-that could be useful:
+## Settings
+If you want to configure `QLColorCode`, there are several `defaults` commands that could be useful:
 
-Setting the text encoding (default is `UTF-8`).  Two settings are required.  The
-first sets Highlight's encoding, the second sets Webkit's:
+Setting the text encoding (default is `UTF-8`).  Two settings are required.  The first sets Highlight's encoding, the second sets Webkit's:
 
     defaults write org.n8gray.QLColorCode textEncoding UTF-16
     defaults write org.n8gray.QLColorCode webkitTextEncoding UTF-16
@@ -23,22 +20,22 @@ Setting the font (default is `Menlo`):
 
     defaults write org.n8gray.QLColorCode font Monaco
     
-the font size (default is `10`):
+Setting the font size (default is `10`):
 
     defaults write org.n8gray.QLColorCode fontSizePoints 9
     
-the color style (default is `edit-xcode`, see [all available themes](http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples)):
+Setting the color style (default is `edit-xcode`, see [all available themes](http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples)):
 
     defaults write org.n8gray.QLColorCode hlTheme ide-xcode
     
-any extra command-line flags for Highlight (see below):
-
-    defaults write org.n8gray.QLColorCode extraHLFlags '-l -W'
-    
-the maximum size (in bytes, deactivated by default) for previewed files:
+Setting the maximum size (in bytes, deactivated by default) for previewed files:
 
     defaults write org.n8gray.QLColorCode maxFileSize 1000000
 
+Setting any extra command-line flags for Highlight (see below):
+
+    defaults write org.n8gray.QLColorCode extraHLFlags '-l -W'
+    
 Here are some useful 'highlight' command-line flags (from the man page):
 
        -F, --reformat=<style>
@@ -70,11 +67,36 @@ Here are some useful 'highlight' command-line flags (from the man page):
        --kw-case=<upper|lower|capitalize>
               control case of case insensitive keywords
 
-This version of the plugin use an external Highlight. By default, it uses `/opt/local/bin/highlight` but it can be changed:
+**Warning:** my fork uses an external `Highlight`. By default, it uses `/opt/local/bin/highlight` (MacPorts default) but it can be changed:
     
     defaults write org.n8gray.QLColorCode pathHL /usr/local/bin/highlight 
 
+## Additional information
 
+### Additional features
+
+#### Decompile
+
+QLColorCode decompiles some formats:
+
+- **Java class**. It requires [jad](http://varaneckas.com/jad/) installed at `/usr/local/bin/jad`. 
+- **Compiled AppleScript**. It requires `osadecompile` installed at `/usr/bin/osadecompile`.
+- **Binary PLIST**. It requires `plutil` installed at `/usr/bin/plutil`. 
+
+### Highlight
+
+#### Plugins
+
+QLColorCode enables some Highlight plugins :
+
+- Java: `java_library`.
+- C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.   
+- Perl: `perl_ref_perl_org`.
+- Python: `python_ref_python_org`.
+- Shell: `bash_functions`.
+- Scala: `scala_ref_scala_lang_org`.
+
+#### Handled languages
 Highlight can handle lots and lots of languages, but this plugin will only be 
 invoked for file types that the OS knows are type "source-code".  Since the OS
 only knows about a limited number of languages, I've added Universal Type 
@@ -88,5 +110,5 @@ nudge the system to tell it something has changed.  Moving the plugin to the
 desktop then back to its installed location should do the trick.
 
 As an aside, by changing colorize.sh you can use this plugin to render any file
-type that you can convert to HTML.  Have fun, and let me know if you do anything
+type that you can convert to HTML. Have fun, and let me know if you do anything
 cool!

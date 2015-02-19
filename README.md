@@ -5,7 +5,7 @@ QLColorCode
 **Warning:** since Mac OS X 10.10, the plugin should be installed in /Library/QuickLook to work correctly. Problem under investigation. 
  
 This is a Quick Look plugin that renders source code with syntax highlighting,
-using the [Highlight library](http://www.andre-simon.de/index.html).
+using the [Highlight library](http://www.andre-simon.de).
 
 To install the plugin, just drag it to `/Library/QuickLook` or `~/Library/QuickLook`.
 You may need to create that folder if it doesn't already exist.

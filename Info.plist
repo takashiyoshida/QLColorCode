@@ -27,7 +27,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>org.n8gray.qlcolorcode</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -771,10 +771,10 @@
 			<array>
 				<string>public.plain-text</string>
 			</array>
-			<key>UTTypeIdentifier</key>
-			<string>org.microsoft.inf</string>
 			<key>UTTypeDescription</key>
 			<string>INF files</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.microsoft.inf</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -788,10 +788,10 @@
 			<array>
 				<string>public.source-code</string>
 			</array>
-			<key>UTTypeIdentifier</key>
-			<string>com.sun.manifest</string>
 			<key>UTTypeDescription</key>
 			<string>MF files</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.sun.manifest</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -805,10 +805,10 @@
 			<array>
 				<string>com.sun.java-class</string>
 			</array>
-			<key>UTTypeIdentifier</key>
-			<string>com.sun.java-class</string>
 			<key>UTTypeDescription</key>
 			<string>Java Class</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.sun.java-class</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -822,10 +822,10 @@
 			<array>
 				<string>public.source-code</string>
 			</array>
-			<key>UTTypeIdentifier</key>
-			<string>com.sun.javafx</string>
 			<key>UTTypeDescription</key>
 			<string>JavaFX ML</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.sun.javafx</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -839,10 +839,10 @@
 			<array>
 				<string>public.plain-text</string>
 			</array>
-			<key>UTTypeIdentifier</key>
-			<string>org.nfo</string>
 			<key>UTTypeDescription</key>
 			<string>NFO files</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.nfo</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -852,12 +852,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>ECore files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.xml</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>ECore files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.omg.ecore</string>
 			<key>UTTypeTagSpecification</key>
@@ -869,12 +869,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>ATL files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>ATL files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.km3</string>
 			<key>UTTypeTagSpecification</key>
@@ -886,12 +886,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>Fish source files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>Fish source files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.fish.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -903,12 +903,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>Coffee source files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>Coffee source files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.coffee.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -920,12 +920,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>CSON source files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>CSON source files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.cson.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -937,12 +937,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>Shell script</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>Shell script</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.bash.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -954,12 +954,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>INNO source files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>INNO source files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.inno.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -971,12 +971,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>ASM source files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>ASM source files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.asm.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -988,12 +988,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>KERMETA source files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>KERMETA source files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.kmt.source</string>
 			<key>UTTypeTagSpecification</key>
@@ -1005,12 +1005,12 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>UTTypeDescription</key>
-			<string>GCC-linked files</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.source-code</string>
 			</array>
+			<key>UTTypeDescription</key>
+			<string>GCC-linked files</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.gcc.files</string>
 			<key>UTTypeTagSpecification</key>

@@ -106,7 +106,7 @@ case ${target} in
         ;;
     *.sh | *.zsh | *.bash | *.csh | *.fish | *.bashrc )
         lang=sh
-        plugin=(--plug-in bash_functions)
+        plugin=(--plug-in bash_functions --plug-in bash_ref_linuxmanpages_com)
         ;;
     *.scala )
         lang=scala

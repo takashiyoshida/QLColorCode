@@ -1,3 +1,9 @@
+2.0.6:
+    * Add Logos source file support (as plain text)
+
+2.0.5:
+    * Lots of minor changes
+
 2.0.4:
     * Update the XCode Project to 10.8
     * Add a new setting to specify the HL path (/opt/local/bin/highlight by default).
@@ -5,7 +11,7 @@
     * Update the script "colorize.sh" to call ZSH by "zsh -f" rather than simply "zsh".
     * Correct some code according to CLang static analyzer.
     * Add some other formats to render.
-    
+
 2.0.2:
     * Modified ReadMe.txt to include the latest info on the Xcode 3.2 conflict
     * Include a link to Andre Simon's page with previews of color styles
@@ -30,7 +36,7 @@
     * Build for x86_64 in addition to i386 and ppc
 
 1.1:
-    * Enabled "safe" plain-text handling.  In other words, files like foo.txt 
+    * Enabled "safe" plain-text handling.  In other words, files like foo.txt
       will be supported, but not files without extensions.  The only way to
       handle extensionless files is to handle *everything*.  This can be done,
       but it requires a more defensive style of operation.
@@ -40,7 +46,7 @@
       portion of renderer, with default UTF-8.
     * Added support for .cs, .el, .jnlp (xml), .e (eiffel), and .vb
     * Fixed support for verilog files
-    
+
 1.0:
     * Hopefully fixed the crasher bug by keeping us single-threaded
     * Added Actionscript, Lisp, IDL, Verilog, VHDL, XHTML  (any others I forgot?)

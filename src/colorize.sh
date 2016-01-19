@@ -125,7 +125,7 @@ esac
 
 debug "Resolved ${target} to language $lang"
 
-cmdOpts=(${plugin} --plug-in outhtml_modern_fonts --plug-in outhtml_codefold --plug-in reduce_filesize --syntax=${lang} --quiet --include-style --font="${font}" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
+cmdOpts=(${plugin} --plug-in outhtml_modern_fonts --plug-in outhtml_codefold --syntax=${lang} --quiet --include-style --font="${font}" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
 
 go4it () {
     debug "Generating the preview"

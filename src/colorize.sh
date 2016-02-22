@@ -4,7 +4,7 @@
 # This code is licensed under the GPL v2.  See LICENSE.txt for details.
 #
 # Copyright 2007 Nathaniel Gray.
-# Copyright 2012-2014 Anthony Gelibert.
+# Copyright 2012-2016 Anthony Gelibert.
 #
 # Expects   $1 = path to resources dir of bundle
 #           $2 = name of file to colorize

@@ -1,5 +1,6 @@
 2.0.6:
-    * Add Logos source file support (as plain text)
+    * Add Logos source file support (as plain text).
+    * Add ViM Scripts source file support.
 
 2.0.5:
     * Lots of minor changes

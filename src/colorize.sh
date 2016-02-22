@@ -38,9 +38,6 @@ case ${target} in
     *.graffle | *.ps )
         exit 1
         ;;
-    *.nfo | *.atl | *.log | *.ld | *.map | *.MF )
-        lang=txt
-        ;;
     *.d )
         lang=make
         ;;
@@ -125,9 +122,9 @@ esac
 
 debug "Resolved ${target} to language $lang"
 
-cmdOpts=(${plugin} --plug-in outhtml_modern_fonts --plug-in outhtml_codefold --syntax=${lang} --quiet --include-style --font="${font}" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
-
 go4it () {
+    cmdOpts=(${plugin} --plug-in outhtml_modern_fonts --plug-in outhtml_codefold --syntax=${lang} --quiet --include-style --font="${font}" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
+
     debug "Generating the preview"
     if [ ${thumb} = "1" ]; then
         ${reader} | head -n 100 | head -c 20000 | ${cmd} ${cmdOpts} && exit 0
@@ -139,7 +136,12 @@ go4it () {
 }
 
 setopt no_err_exit
-# We only try one time as we use --validate-input option that fall to plain text if invalid input.
+
 go4it
-debug Reached the end of the file.  That should not happen.
+# Uh-oh, it didn't work.  Fall back to rendering the file as plain
+debug "First try failed, second try..."
+lang=txt
+go4it
+
+debug "Reached the end of the file.  That should not happen."
 exit 101

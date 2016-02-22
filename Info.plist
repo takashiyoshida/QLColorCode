@@ -19,6 +19,7 @@
 				<string>org.tug.tex</string>
 				<string>public.plain-text</string>
 				<string>com.sun.java-class</string>
+				<string>org.vim.vim-script</string>
 			</array>
 		</dict>
 	</array>

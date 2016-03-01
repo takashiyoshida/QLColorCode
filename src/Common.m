@@ -77,15 +77,23 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
 #endif
                                    @"10", @"fontSizePoints",
                                    @"Menlo", @"font",
-                                   @"edit-xcode", @"hlTheme", 
+                                   @"edit-xcode", @"hlTheme",
 //                                   @"-lz -j 3 -t 4 --kw-case=capitalize ", @"extraHLFlags", 
                                    @"-t 4 --kw-case=capitalize ", @"extraHLFlags", 
                                    @"/opt/local/bin/highlight", @"pathHL",
                                    @"", @"maxFileSize",
                                    @"UTF-8", @"textEncoding", 
                                    @"UTF-8", @"webkitTextEncoding", nil]];
+
     [env addEntriesFromDictionary:[defaults persistentDomainForName:myDomain]];
     
+    // This overrides hlTheme if hlThumbTheme is set and we're generating a thumbnail
+    // (This way we won't irritate people with existing installs)
+    // Admittedly, it's a little shady, overriding the set value, but I'd rather complicate the compiled code
+    if (thumbnail && [[env allKeys] containsObject:@"hlThumbTheme"]) {
+        [env setObject:[env objectForKey:@"hlThumbTheme"] forKey:@"hlTheme"];
+    }
+
     NSString *cmd = [NSString stringWithFormat:
                      @"'%@/colorize.sh' '%@' '%@' %s",
                      rsrcEsc, rsrcEsc, [targetEsc stringByReplacingOccurrencesOfString:@"'" withString:@"'\\''"], thumbnail ? "1" : "0"];

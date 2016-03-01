@@ -28,6 +28,10 @@ Setting the color style (default is `edit-xcode`, see [all available themes](htt
 
     defaults write org.n8gray.QLColorCode hlTheme ide-xcode
     
+Setting the thumbnail color style (deactivated by default):
+
+    defaults write org.n8gray.QLColorCode hlThumbTheme ide-xcode
+
 Setting the maximum size (in bytes, deactivated by default) for previewed files:
 
     defaults write org.n8gray.QLColorCode maxFileSize 1000000

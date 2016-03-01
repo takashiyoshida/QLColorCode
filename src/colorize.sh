@@ -101,7 +101,7 @@ case ${target} in
         lang=py
         plugin=(--plug-in python_ref_python_org)
         ;;
-    *.sh | *.zsh | *.bash | *.csh | *.fish | *.bashrc )
+    *.sh | *.zsh | *.bash | *.csh | *.fish | *.bashrc | *.zshrc )
         lang=sh
         plugin=(--plug-in bash_functions --plug-in bash_ref_linuxmanpages_com)
         ;;
@@ -131,8 +131,8 @@ go4it () {
     elif [ -n "${maxFileSize}" ]; then
         ${reader} | head -c ${maxFileSize} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
     else
-            ${reader} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
- 	   fi
+        ${reader} | ${cmd} -T "${target}" ${cmdOpts} && exit 0
+    fi
 }
 
 setopt no_err_exit

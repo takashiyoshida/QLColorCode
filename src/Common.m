@@ -69,6 +69,32 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
     
     // Set up preferences
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    // Try to find highlight location
+    NSString *highlightPath = [defaults valueForKey:@"pathHL"];
+    if (highlightPath == nil) {
+        NSTask *task = [[NSTask alloc] init];
+        [task setLaunchPath:@"/bin/bash"];
+        [task setArguments:@[@"-l", @"-c", @"which highlight"]];
+        NSPipe *pipe;
+        pipe = [NSPipe pipe];
+        [task setStandardOutput: pipe];
+        NSFileHandle *file;
+        file = [pipe fileHandleForReading];
+        [task launch];
+        NSData *data;
+        data = [file readDataToEndOfFile];
+        [task waitUntilExit];
+        highlightPath = [[[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        [task release];
+        [file closeFile];
+        if (![highlightPath hasPrefix: @"/"] || ![highlightPath hasSuffix: @"highlight"]) { // fallback on default
+            highlightPath = @"/opt/local/bin/highlight";
+        }
+        [defaults setObject:highlightPath forKey:@"pathHL"];
+        [defaults synchronize];
+    }
+    
     NSMutableDictionary *env = [NSMutableDictionary dictionaryWithDictionary:
                                 [[NSProcessInfo processInfo] environment]];
     [env addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:

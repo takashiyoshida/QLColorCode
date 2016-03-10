@@ -73,6 +73,7 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
     // Try to find highlight location
     NSString *highlightPath = [defaults valueForKey:@"pathHL"];
     if (highlightPath == nil) {
+        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] init];
         NSTask *task = [[NSTask alloc] init];
         [task setLaunchPath:@"/bin/bash"];
         [task setArguments:@[@"-l", @"-c", @"which highlight"]];
@@ -91,8 +92,11 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
         if (![highlightPath hasPrefix: @"/"] || ![highlightPath hasSuffix: @"highlight"]) { // fallback on default
             highlightPath = @"/opt/local/bin/highlight";
         }
-        [defaults setObject:highlightPath forKey:@"pathHL"];
-        [defaults synchronize];
+        NSMutableDictionary *newDefaults = [NSMutableDictionary dictionaryWithObject:highlightPath forKey:@"pathHL"];
+        [newDefaults addEntriesFromDictionary: [defaults persistentDomainForName:myDomain]];
+        [userDefaults setPersistentDomain: newDefaults forName:myDomain];
+        [userDefaults synchronize];
+        [userDefaults release];
     }
     
     NSMutableDictionary *env = [NSMutableDictionary dictionaryWithDictionary:

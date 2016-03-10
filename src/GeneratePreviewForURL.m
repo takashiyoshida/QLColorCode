@@ -51,6 +51,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
                                           //kUTTypePlainText,
                                           kUTTypeHTML, 
                                           properties);
+    
 #ifndef DEBUG
 done:
 #endif

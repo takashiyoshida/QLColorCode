@@ -51,8 +51,9 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
                                           //kUTTypePlainText,
                                           kUTTypeHTML, 
                                           properties);
-    
+#ifndef DEBUG
 done:
+#endif
     n8log(@"Finished preview in %.3f sec", -[startDate timeIntervalSinceNow] );
     [pool release];
     return noErr;

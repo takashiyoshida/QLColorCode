@@ -90,7 +90,9 @@ GenerateThumbnailForURL(void *thisInterface,
     }
     [webView release];
     
+#ifndef DEBUG
 done:
+#endif
 #ifdef DEBUG
     n8log(@"Finished thumbnail after %.3f sec\n\n", -[startDate timeIntervalSinceNow] );
 #endif

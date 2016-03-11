@@ -95,7 +95,7 @@ QLColorCode decompiles some formats:
 QLColorCode enables some Highlight plugins :
 
 - Java: `java_library`.
-- C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.   
+- C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.
 - Perl: `perl_ref_perl_org`.
 - Python: `python_ref_python_org`.
 - Shell: `bash_functions`.

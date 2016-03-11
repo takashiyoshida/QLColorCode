@@ -79,13 +79,12 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
         NSUserDefaults *userDefaults = [[NSUserDefaults alloc] init];
         NSData* data = runTask(@"which highlight", env, status);
         highlightPath = [[[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        if (![highlightPath hasPrefix: @"/"] || ![highlightPath hasSuffix: @"highlight"]) { // fallback on default
-            highlightPath = @"/opt/local/bin/highlight";
+        if ([highlightPath hasPrefix: @"/"] && [highlightPath hasSuffix: @"highlight"]) { // i.e. highlighPath looks like the actual path
+            NSMutableDictionary *newDefaults = [NSMutableDictionary dictionaryWithObject:highlightPath forKey:@"pathHL"];
+            [newDefaults addEntriesFromDictionary: [defaults persistentDomainForName:myDomain]];
+            [userDefaults setPersistentDomain: newDefaults forName:myDomain];
+            [userDefaults synchronize];
         }
-        NSMutableDictionary *newDefaults = [NSMutableDictionary dictionaryWithObject:highlightPath forKey:@"pathHL"];
-        [newDefaults addEntriesFromDictionary: [defaults persistentDomainForName:myDomain]];
-        [userDefaults setPersistentDomain: newDefaults forName:myDomain];
-        [userDefaults synchronize];
         [userDefaults release];
     }
     

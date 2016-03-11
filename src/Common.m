@@ -74,12 +74,12 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
                                 [[NSProcessInfo processInfo] environment]];
 
     // Try to find highlight location
-    NSString *highlightPath = [defaults valueForKey:@"pathHL"];
+    NSString *highlightPath = [[defaults persistentDomainForName:myDomain] valueForKey:@"pathHL"];
     if (highlightPath == nil) {
         NSUserDefaults *userDefaults = [[NSUserDefaults alloc] init];
         NSData* data = runTask(@"which highlight", env, status);
         highlightPath = [[[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        if ([highlightPath hasPrefix: @"/"] && [highlightPath hasSuffix: @"highlight"]) { // i.e. highlighPath looks like the actual path
+        if (*status == 0 && [highlightPath hasPrefix: @"/"] && [highlightPath hasSuffix: @"highlight"]) { // i.e. highlightPath looks like the actual path
             NSMutableDictionary *newDefaults = [NSMutableDictionary dictionaryWithObject:highlightPath forKey:@"pathHL"];
             [newDefaults addEntriesFromDictionary: [defaults persistentDomainForName:myDomain]];
             [userDefaults setPersistentDomain: newDefaults forName:myDomain];

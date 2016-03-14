@@ -71,9 +71,10 @@ Here are some useful 'highlight' command-line flags (from the man page):
        --kw-case=<upper|lower|capitalize>
               control case of case insensitive keywords
 
-**Warning:** my fork uses an external `Highlight`. By default, it uses `/opt/local/bin/highlight` (MacPorts default) but it can be changed:
+**Warning:** my fork uses an external `Highlight`. It will attempt to find `highlight` on your `PATH` (so it should work out of the box for homebrew and MacPorts), but if it can't find it, it'll use `/opt/local/bin/highlight` (MacPorts default). This can be changed:
     
-    defaults write org.n8gray.QLColorCode pathHL /usr/local/bin/highlight 
+    defaults write org.n8gray.QLColorCode pathHL /path/to/your
+    /highlight 
 
 ## Additional information
 
@@ -94,7 +95,7 @@ QLColorCode decompiles some formats:
 QLColorCode enables some Highlight plugins :
 
 - Java: `java_library`.
-- C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.   
+- C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.
 - Perl: `perl_ref_perl_org`.
 - Python: `python_ref_python_org`.
 - Shell: `bash_functions`.

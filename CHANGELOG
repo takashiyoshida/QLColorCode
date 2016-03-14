@@ -1,6 +1,9 @@
 2.0.6:
     * Add Logos source file support (as plain text).
     * Add ViM Scripts source file support.
+    * Code is now GPL 3.
+    * Add the ability to use an optional theme only for thumbnails (thanks @vilhelmen).
+    * Autodetect "highlight" path (thanks @saagarjha).
 
 2.0.5:
     * Lots of minor changes

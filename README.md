@@ -73,8 +73,7 @@ Here are some useful 'highlight' command-line flags (from the man page):
 
 **Warning:** my fork uses an external `Highlight`. It will attempt to find `highlight` on your `PATH` (so it should work out of the box for homebrew and MacPorts), but if it can't find it, it'll use `/opt/local/bin/highlight` (MacPorts default). This can be changed:
     
-    defaults write org.n8gray.QLColorCode pathHL /path/to/your
-    /highlight 
+    defaults write org.n8gray.QLColorCode pathHL /path/to/your/highlight 
 
 ## Additional information
 

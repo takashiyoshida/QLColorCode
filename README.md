@@ -93,11 +93,12 @@ QLColorCode decompiles some formats:
 
 QLColorCode enables some Highlight plugins :
 
-- Java: `java_library`.
+- In all languages: `outhtml_modern_fonts` and `outhtml_codefold`.
+- Java (sources and classes): `java_library`.
 - C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.
 - Perl: `perl_ref_perl_org`.
 - Python: `python_ref_python_org`.
-- Shell: `bash_functions`.
+- Shell: `bash_functions` and `bash_ref_linuxmanpages_com`.
 - Scala: `scala_ref_scala_lang_org`.
 
 #### Handled languages

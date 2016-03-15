@@ -123,7 +123,7 @@ esac
 debug "Resolved ${target} to language $lang"
 
 go4it () {
-    cmdOpts=(${plugin} --plug-in outhtml_modern_fonts --plug-in outhtml_codefold --syntax=${lang} --quiet --include-style --font="${font}" --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
+    cmdOpts=(${plugin} --plug-in outhtml_codefold --syntax=${lang} --quiet --include-style --font=${font} --font-size=${fontSizePoints} --style=${hlTheme} --encoding=${textEncoding} ${=extraHLFlags} --validate-input)
 
     debug "Generating the preview"
     if [ ${thumb} = "1" ]; then

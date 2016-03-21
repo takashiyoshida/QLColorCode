@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh -f
 
 ###############################################################################
-# This code is licensed under the GPL v2.  See LICENSE.txt for details.
+# This code is licensed under the GPL v3.  See LICENSE.txt for details.
 #
 # Copyright 2007 Nathaniel Gray.
 # Copyright 2012-2016 Anthony Gelibert.

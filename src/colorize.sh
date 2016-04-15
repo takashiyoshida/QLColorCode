@@ -62,7 +62,7 @@ case ${target} in
     *.pde | *.ino )
         lang=c
         ;;
-    *.c | *.cpp )
+    *.c | *.cpp | *.ino )
         lang=${target##*.}
         plugin=(--plug-in cpp_syslog --plug-in cpp_ref_cplusplus_com --plug-in cpp_ref_local_includes)
         ;;

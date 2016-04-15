@@ -20,6 +20,7 @@
 				<string>public.plain-text</string>
 				<string>com.sun.java-class</string>
 				<string>org.vim.vim-script</string>
+				<string>public.tex</string>
 			</array>
 		</dict>
 	</array>
@@ -195,16 +196,14 @@
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>public.text</string>
+				<string>public.tex</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>TeX text file</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.tug.tex</string>
+			<string>public.tex</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
-				<key>com.apple.ostype</key>
-				<string>TEXT</string>
 				<key>public.filename-extension</key>
 				<array>
 					<string>tex</string>

@@ -73,6 +73,10 @@ NSData *colorizeURL(CFBundleRef bundle, CFURLRef url, int *status, int thumbnail
     NSMutableDictionary *env = [NSMutableDictionary dictionaryWithDictionary:
                                 [[NSProcessInfo processInfo] environment]];
 
+    NSString *path = [env objectForKey: @"PATH"];
+    NSString *newPath = [path stringByAppendingString: @":/usr/local/bin:/usr/local/sbin"];
+    [env setObject: newPath forKey: @"PATH"];
+    
     // Try to find highlight location
     NSString *highlightPath = [[defaults persistentDomainForName:myDomain] valueForKey:@"pathHL"];
     if (highlightPath == nil) {

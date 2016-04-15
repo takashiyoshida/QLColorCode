@@ -1,3 +1,7 @@
+2.0.7:
+    * Correct autodetect path on 10.11 (thanks @cc941201).
+    * Correct LaTeX and Arduino support.
+
 2.0.6:
     * Add Logos source file support (as plain text).
     * Add ViM Scripts source file support.

@@ -1,5 +1,5 @@
 /* Localized versions of Info.plist keys */
 
-CFBundleGetInfoString = "QLColorCode version 2.0.6, Copyright (c) 2016 Nathaniel Gray, Anthony Gelibert.";
+CFBundleGetInfoString = "QLColorCode version 2.0.7, Copyright (c) 2016 Nathaniel Gray, Anthony Gelibert.";
 NSHumanReadableCopyright = "Copyright (c) 2016 Nathaniel Gray, Anthony Gelibert.";
 

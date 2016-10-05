@@ -20,19 +20,19 @@ Setting the text encoding (default is `UTF-8`).  Two settings are required.  The
 
     defaults write org.n8gray.QLColorCode textEncoding UTF-16
     defaults write org.n8gray.QLColorCode webkitTextEncoding UTF-16
-    
+
 Setting the font (default is `Menlo`):
 
     defaults write org.n8gray.QLColorCode font Monaco
-    
+
 Setting the font size (default is `10`):
 
     defaults write org.n8gray.QLColorCode fontSizePoints 9
-    
+
 Setting the color style (default is `edit-xcode`, see [all available themes](http://www.andre-simon.de/dokuwiki/doku.php?id=theme_examples)):
 
     defaults write org.n8gray.QLColorCode hlTheme ide-xcode
-    
+
 Setting the thumbnail color style (deactivated by default):
 
     defaults write org.n8gray.QLColorCode hlThumbTheme ide-xcode
@@ -44,7 +44,7 @@ Setting the maximum size (in bytes, deactivated by default) for previewed files:
 Setting any extra command-line flags for Highlight (see below):
 
     defaults write org.n8gray.QLColorCode extraHLFlags '-l -W'
-    
+
 Here are some useful 'highlight' command-line flags (from the man page):
 
        -F, --reformat=<style>
@@ -77,8 +77,8 @@ Here are some useful 'highlight' command-line flags (from the man page):
               control case of case insensitive keywords
 
 **Warning:** my fork uses an external `Highlight`. It will attempt to find `highlight` on your `PATH` (so it should work out of the box for homebrew and MacPorts), but if it can't find it, it'll use `/opt/local/bin/highlight` (MacPorts default). This can be changed:
-    
-    defaults write org.n8gray.QLColorCode pathHL /path/to/your/highlight 
+
+    defaults write org.n8gray.QLColorCode pathHL /path/to/your/highlight
 
 ## Additional information
 
@@ -88,9 +88,9 @@ Here are some useful 'highlight' command-line flags (from the man page):
 
 QLColorCode decompiles some formats:
 
-- **Java class**. It requires [jad](http://varaneckas.com/jad/) installed at `/usr/local/bin/jad`. 
+- **Java class**. It requires [jad](http://varaneckas.com/jad/) installed at `/usr/local/bin/jad`.
 - **Compiled AppleScript**. It requires `osadecompile` installed at `/usr/bin/osadecompile`.
-- **Binary PLIST**. It requires `plutil` installed at `/usr/bin/plutil`. 
+- **Binary PLIST**. It requires `plutil` installed at `/usr/bin/plutil`.
 
 ### Highlight
 
@@ -103,19 +103,19 @@ QLColorCode enables some Highlight plugins :
 - C/C++: `cpp_syslog`, `cpp_ref_cplusplus_com` and `cpp_ref_local_includes`.
 - Perl: `perl_ref_perl_org`.
 - Python: `python_ref_python_org`.
-- Shell: `bash_functions` and `bash_ref_linuxmanpages_com`.
+- Shell: `bash_functions`.
 - Scala: `scala_ref_scala_lang_org`.
 
 #### Handled languages
-Highlight can handle lots and lots of languages, but this plugin will only be 
+Highlight can handle lots and lots of languages, but this plugin will only be
 invoked for file types that the OS knows are type "source-code".  Since the OS
-only knows about a limited number of languages, I've added Universal Type 
-Identifier (UTI) declarations for several "interesting" languages.  If I've 
+only knows about a limited number of languages, I've added Universal Type
+Identifier (UTI) declarations for several "interesting" languages.  If I've
 missed your favorite language, take a look at the Info.plist file inside the
 plugin bundle and look for the UTImportedTypeDeclarations section.  I
 haven't added all the languages that Highlight can handle because it's rumored
 that having two conflicting UTI declarations for the same file extension can
-cause problems.  Note that if you do edit the Info.plist file you need to 
+cause problems.  Note that if you do edit the Info.plist file you need to
 nudge the system to tell it something has changed.  Moving the plugin to the
 desktop then back to its installed location should do the trick.
 

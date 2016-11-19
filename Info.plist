@@ -22,6 +22,7 @@
 				<string>org.vim.vim-script</string>
 				<string>public.tex</string>
 				<string>public.text</string>
+				<string>public.json</string>
 			</array>
 		</dict>
 	</array>

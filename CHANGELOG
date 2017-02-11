@@ -1,3 +1,10 @@
+2.0.9 (in dev.):
+    * Add PHP/JS support (thanks @sloanlance).
+    * Add C#/F# support (thanks @breiter).
+
+2.0.8:
+    * Remove bash_ref_linuxmanpages_com plugin.
+
 2.0.7:
     * Correct autodetect path on 10.11 (thanks @cc941201).
     * Correct LaTeX and Arduino support.

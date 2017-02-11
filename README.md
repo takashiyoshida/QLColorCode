@@ -57,7 +57,7 @@ Here are some useful 'highlight' command-line flags (from the man page):
        -j, --line-number-length=<num>
               line number length incl. left padding
 
-       -l, --linenumbers
+       -l, --line-numbers
               print line numbers in output file
 
        -t  --replace-tabs=<num>

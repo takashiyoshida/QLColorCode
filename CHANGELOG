@@ -1,6 +1,7 @@
 2.0.9 (in dev.):
     * Add PHP/JS support (thanks @sloanlance).
     * Add C#/F# support (thanks @breiter).
+    * Compile with XCode 9.0 targeting 10.13.
 
 2.0.8:
     * Remove bash_ref_linuxmanpages_com plugin.
